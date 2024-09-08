@@ -1,14 +1,14 @@
-version: '3'
+version: "3"
 services:
-  gpt:
-    build: ./gpt
+  chat-gpt-engine:
+    build: ./chat_gpt_engine
     ports:
       - "50052:50052"
     networks:
       - my_network
 
-  main:
-    build: ./main
+  encyclopedia-gateway:
+    build: ./encyclopedia_gateway
     ports:
       - "8000:8000"
     networks:
