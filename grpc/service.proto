@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package service;
+
+service GPTService {
+  rpc ProcessData (GPTRequest) returns (GPTResponse) {}
+}
+
+message GPTRequest {
+  string message = 1;
+}
+
+message GPTResponse {
+  string reply = 1;
+}
