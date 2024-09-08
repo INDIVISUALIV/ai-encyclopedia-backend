@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gpt:
+    build: ./gpt
+    ports:
+      - "8000:8000"
+
+  platform:
+    build: ./platform
+    ports:
+      - "8001:8001"
