@@ -2,9 +2,7 @@ import grpc
 from concurrent import futures
 import service_pb2_grpc as pb2_grpc
 import service_pb2 as pb2
-from fastapi import FastAPI
 
-app = FastAPI()
 
 class GPTService(pb2_grpc.GPTServiceServicer):
     def ProcessData(self, request, context):
